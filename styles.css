@@ -1,0 +1,173 @@
+:root{
+
+--Very_Dark_Magenta: hsl(300, 43%, 22%);
+--Soft_Pink: hsl(333, 80%, 67%);
+
+
+
+--Dark_Grayish_Magenta: hsl(303, 10%, 53%);
+--Light_Grayish_Magenta: hsl(300, 24%, 96%);
+--White: hsl(0, 0%, 100%);
+
+--fs-body: 1rem;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
+
+*::before,
+*::after {
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+img{
+    display: block;
+    max-width: 100%;
+}
+
+h1{
+    height: .9;
+}
+body{
+    font-family: "League Spartan", sans-serif;
+    font-weight: 400;
+    line-height: 1.5rem;
+    color: var(--Dark_Grayish_Magenta);
+    background: url('images/bg-pattern-top-desktop.svg') top left, 
+                url('images/bg-pattern-bottom-desktop.svg') bottom right;
+    background-repeat: no-repeat;
+    background-color: var(--White);
+
+}
+
+.flex{
+    display: flex;
+    align-items: center;
+}
+
+.title, .rating-text{
+    color: var(--Very_Dark_Magenta);
+    font-weight: 700;
+}
+
+.title{
+    font-size: 2rem;
+    margin: 1rem;
+
+}
+
+.social-content{
+    gap: 2rem;
+}
+.social-row-desc{
+    text-align: center;
+}
+.social-container{
+    margin: 4rem 1rem;
+}
+.social-row{
+    flex-direction: column;
+}
+.card-container{
+    gap: 1rem;
+    margin-top: 2rem;
+}
+.user-info {
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+.user-info img{
+    max-width: 3em;
+    border-radius: 50%;
+}
+.card{
+    background-color: var(--Very_Dark_Magenta);
+    color: var(--White);
+    border-radius: .5rem;
+    padding: 2rem;
+}
+
+.user-name{
+    font-weight: 700;
+}
+.user-stat{
+    color: var(--Soft_Pink);
+
+}
+.star{
+    gap: .5rem;
+}
+.rating-item{
+    flex-direction: column;
+}
+.rating > * + * {
+    margin-top: 1rem;
+}
+.rating-item{
+    background-color: var(--Light_Grayish_Magenta);
+    display: inline-flex;
+    width: 100%;
+    border-radius: .5rem;
+    padding: .8rem;
+}
+@media (min-width: 750px){
+    .social-row-desc{
+        text-align: left;
+    }
+    .social-content, .card-container{
+        flex-direction: row;
+    }
+    .social-content > *{
+        flex-basis: 50%;
+    }
+}
+@media (min-width: 1024px){
+    .title{
+        font-size: 2.75rem;
+        line-height: 1;
+    }
+    .wrapper{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100dvh;
+    }
+    .social-content{
+        justify-content: space-between;
+    }
+    .social-row-desc{
+        flex-basis: 40%;
+    }
+    .social-container{
+        max-width: 65em;
+    }
+    .card-container{
+        margin-top: 1rem;
+    }
+    .rating{
+        display: flex;
+        align-items: flex-end;
+        flex-direction: column;
+    }
+    .rating-item{
+        gap: 2rem;
+        width: 80%;
+        justify-content: center;
+        flex-direction: row;
+        padding:0;
+    }
+    .rating > *:nth-child(1){
+        margin-right: 6rem;
+    }
+    .rating> *:nth-child(2){
+        margin-right: 3rem;
+    }
+    .card-container > *:nth-child(1){
+        margin-bottom: 6rem;
+    }
+    .card-container> *:nth-child(2){
+        margin-bottom: 3rem;
+    }
+}
